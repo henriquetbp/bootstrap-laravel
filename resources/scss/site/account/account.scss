@@ -1,0 +1,208 @@
+.account-section {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fafafa;
+
+    & .account-content {
+        padding: 0 20px;
+
+        & .account-heading {
+            width: 100%;
+            margin-bottom: 40px;
+
+            & a {
+                text-decoration: none;
+                color: #999;
+            }
+        }
+    
+        & .customer-data-box {
+            width: 100%;
+            position: relative;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #9c9c9c;
+
+            & .badge {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+
+            & .customer-item {
+                margin-bottom: 30px;
+
+                & p {
+                    color: #999999;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &  .customer-edit-box {
+            display: none;
+            width: 100%;
+            position: relative;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #9c9c9c;
+
+            & .password-container {
+                position: relative;
+
+                & .toggle-password {
+                    position: absolute;
+                    right: 10px;
+                    top: 18px;
+                    font-size: 13px;
+                    cursor: pointer;
+                    color: #929292;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1193px) {
+        .account-heading {
+            margin-top: 30px;
+
+            & h3 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}
+
+.order-box {
+
+   & .card {
+
+    & .card-header {
+        background-color: #e9e9e9;
+        & .label-order {
+            font-size: 13px;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        & .text-order {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        & .badge {
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    }
+
+    .card-body {
+
+        & .order-list {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+
+            & .thumb-product {
+
+                & img {
+                    max-width: 64px;
+                }
+            }
+
+           & .info-product {
+
+                & .name-product {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+
+                & .option-order {
+                    font-size: 14px;
+                    color: #999;
+                    margin-bottom: 0;
+                }
+
+                & .price-order {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        & .favorite-item {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+
+            & .product-item {
+                display: flex;
+                gap: 30px;
+                text-decoration: none;
+                color: #323232;
+            }
+
+            & .thumb-product {
+
+                & img {
+                    max-width: 64px;
+                }
+            }
+
+           & .info-product {
+
+                & .name-product {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+
+                & .option-order {
+                    font-size: 14px;
+                    color: #999;
+                    margin-bottom: 0;
+                }
+
+                & .price-order {
+                    font-size: 14px;
+                }
+            }
+
+            & .remove-list {
+
+                & button {
+                    background-color: transparent;
+                    transition: all .4s;
+
+                    :hover {
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
+
+    }
+
+    .card-resume {
+        
+        & .resume-title {
+            letter-spacing: 2px;
+        }
+
+        & p {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        .resume-item {
+            border-bottom: 1px solid #eee;
+            padding: 4px 0;
+        }
+    }
+}

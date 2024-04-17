@@ -1,0 +1,327 @@
+.checkout-section {
+    padding: 30px 0 10px 0;
+
+    & .steps-container {
+
+        & .stepper-wrapper {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        & .stepper-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+
+            & .step-name {
+                font-size: 13px;
+            }
+
+            
+        }
+
+        & .stepper-item::before {
+            position: absolute;
+            content: "";
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            top: 20px;
+            left: -50%;
+            z-index: 2;
+        }
+
+        & .stepper-item::after {
+            position: absolute;
+            content: "";
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            top: 20px;
+            left: 50%;
+            z-index: 2;
+        }
+
+        & .stepper-item .step-counter {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            
+            background: #ccc;
+            margin-bottom: 6px;
+        }
+
+        & .stepper-item.active {
+            font-weight: bold; 
+            color: #26876f;  
+        }
+
+        & .stepper-item.active .step-counter {
+            color: #fff;
+            background-color: #26876f;  
+        }
+
+        & .stepper-item.completed .step-counter {
+            background-color: var(--cor1);
+            color: #fff;
+        }
+
+        & .stepper-item.completed::after {
+            position: absolute;
+            content: "";
+            border-bottom: 2px solid var(--cor1);
+            width: 100%;
+            top: 20px;
+            left: 50%;
+            z-index: 3;
+        }
+
+        & .stepper-item:first-child::before {
+            content: none;
+        }
+
+        & .stepper-item:last-child::after {
+            content: none;
+        }
+
+    }
+
+    & .checkout-resume-data {
+        margin: 20px 0;
+
+        & .card-checkout {
+            background-color: #f2f2f2;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--cor1);
+
+            .card-checkout-header {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                
+                & h4 {
+                    font-family: var(--main-font);
+                    font-size: 22px;
+                    & i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            & .card-checkout-content {
+
+                & ul {
+                    list-style: none;
+                    padding-left: 33px;
+
+                    & li {
+                        line-height: 30px;
+                    }
+                }
+
+                & .accordion {
+                    background-color: #fff;
+                    color: #444;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    font-size: 19px;
+                    margin-top: 10px;
+                    transition: 0.4s;
+
+                    & i {
+                        margin-right: 7px;
+                    }
+                  }
+                  
+                 & .active, .accordion:hover {
+                    background-color: #ccc;
+                  }
+                  
+                 & .accordion:after {
+                    content: '\002B';
+                    color: #777;
+                    font-weight: bold;
+                    float: right;
+                    margin-left: 5px;
+                  }
+                  
+                 & .active:after {
+                    content: "\2212";
+                  }
+                  
+                 & .panel {
+                    padding: 0 18px;
+                    background-color: #f5f5f5;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                  }
+
+                &  .option-box {
+                    margin-top: 30px;ar
+        
+                    .radio-container {
+                        margin-bottom: 10px;
+                    }
+
+                    & .option-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        & i {
+                            display: none;
+                        }
+                    }
+            
+                    /* Esconde os radio buttons padrão */
+                    input[type="radio"] {
+                        display: none;
+                    }
+            
+                    /* Estiliza os rótulos como radio buttons personalizados */
+                    input[type="radio"] + label {
+                        /* display: inline-block; */
+                        width: 100%;
+                        padding: 8px 16px;
+                        margin: 5px 5px 5px 0;
+                        cursor: pointer;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+            
+                    /* Estiliza os rótulos quando os radio buttons estão marcados */
+                    input[type="radio"]:checked + label {
+                        background-color: var(--cor1);
+                        color: white;
+                    }
+
+                    input[type="radio"]:checked + label i {
+                        display: block;
+                    }
+            }
+            
+                
+            }
+
+            & .tab-payment {
+                 margin: 30px 0;
+
+                 & .nav-link {
+                    color: #989898;
+
+                    & i {
+                        margin-right: 7px;
+                    }
+                 }
+
+                & .nav-link.active {
+                    color: #fff;
+                    background-color: var(--cor1);
+                }
+            }
+
+            & .credit-card-box {
+                padding-bottom: 40px;
+                & .form-select {
+                    height: 57px;
+                }
+            }
+        }
+    }
+
+    .card-checkout-resume {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10px;
+
+        & .card-checkout-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        & .card-resume-content {
+           
+
+            & .product-item {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                padding: 20px 0;
+                border-bottom: 1px solid #eee;
+
+                & .resume-info {
+                    width: 100%;
+
+                    & .name-item {
+                        font-weight: 400;
+                        margin-bottom: 0;
+                    }
+
+                    & .badge {
+                        background-color: #d3d3d3 !important;
+                        color: #434343;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    & .cupom-resume {
+        margin: 20px 0;
+    }
+
+    & .total-resume {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+
+        & .resume-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    }
+
+    & .next-resume-button {
+        margin: 20px 0 0 0;
+        text-align: center;
+
+        & .btn {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .steps-container {
+            & .text-end {
+                text-align: center !important;
+                & img {
+                    max-width: 140px;
+                    margin: 20px 0 10px 0;
+                }
+            }
+        }
+        .stepper-item .step-name {
+            font-size: 10px !important;
+        }
+    }
+
+}
+
+.boleto-toggle {
+    display: none;
+}

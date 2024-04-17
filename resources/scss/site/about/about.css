@@ -1,0 +1,74 @@
+.about-header {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    padding: 20px 0;
+    background-color: #ddd;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+
+    & p {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
+    & h1 {
+        color: #fff;
+        font-size: 54px;
+    }
+}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+
+    & h2 {
+        margin-bottom: 20px;
+    }
+
+}
+
+.institutional-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    background-image: url(../../images/about/texture.png);
+
+    & .logo-box {
+        margin-bottom: 100px;
+    }
+
+    & .institutional-items {
+
+        & .card {
+            min-height: 100%;
+
+            & .card-body {
+                display: flex;
+                align-items: center;
+                padding: 40px;
+
+            }
+        }
+
+        & .card-prime {
+            background-color: Var(--cor1);
+            border: 1px solid #343434;
+
+            & h2, p {
+                color: #fff;
+            }
+        }
+
+        & img {
+            margin-bottom: 30px;
+            opacity: .3;
+            max-width: 125px;
+        }
+    }
+}
